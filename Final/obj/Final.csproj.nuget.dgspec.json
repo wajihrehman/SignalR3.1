@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\SignalRDemo\\SignalRFinal\\Final\\Final\\Final.csproj": {}
+    "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj": {}
   },
   "projects": {
-    "G:\\SignalRDemo\\SignalRFinal\\Final\\Final\\Final.csproj": {
+    "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\SignalRDemo\\SignalRFinal\\Final\\Final\\Final.csproj",
+        "projectUniqueName": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj",
         "projectName": "Final",
-        "projectPath": "G:\\SignalRDemo\\SignalRFinal\\Final\\Final\\Final.csproj",
+        "projectPath": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj",
         "packagesPath": "C:\\Users\\mwaji\\.nuget\\packages\\",
-        "outputPath": "G:\\SignalRDemo\\SignalRFinal\\Final\\Final\\obj\\",
+        "outputPath": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mwaji\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNet.SignalR.Core": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.30, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

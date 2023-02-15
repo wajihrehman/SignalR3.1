@@ -36,7 +36,9 @@ namespace Final.Controllers
             {
                 _db.T_Years.Add(model);
                 _db.SaveChanges();
-                GetYears();
+                //GetYears();
+                var obj = new RealtimeDataHub();
+                obj.GetUsers();
                 //await _firstHub.Clients.All.SendAsync("LoadProducts");
                 return Ok(new { result = "API Running" });
             }
