@@ -9,7 +9,7 @@ namespace Final.Hubs
 {
     public class RealtimeDataHub : Hub
     {
-        public void GetUsers()
+        public List<Years> GetUsers()
         {
             List<Years> _lst = new List<Years>();
             using (var connection = new SqlConnection("Server=DESKTOP-NBU4QBG;Database=SignalRFinal;Trusted_Connection=True;"))
@@ -43,7 +43,7 @@ namespace Final.Hubs
                     }
                 }
             }
-            var x = _lst;
+            return _lst;
             //IHubContext context = GlobalHost.ConnectionManager.GetHubContext<RealtimeDataHub>();
             //context.Clients.All.displayUsers(_lst);
         }

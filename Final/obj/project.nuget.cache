@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1aUuntWK/pODo/5oh0+8LySqv0KOrks6M2WXa+2qYT99KhqeIhHCKMYooMZmeyStgV6vfm8N4PXpyPAl00bhUQ==",
+  "dgSpecHash": "Xn0Owmg9tfVP6tQKM43nFWVBt4hsQgmkx9LwYtTQiJ0iau9Hw01AUa/ZjyGpvnv/wG2IkLktOSiEFF6oswHxaw==",
   "success": true,
-  "projectFilePath": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj",
+  "projectFilePath": "G:\\SignalRDemo\\20Feb\\test2\\SignalR3.1\\Final\\Final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mwaji\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
     "C:\\Users\\mwaji\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

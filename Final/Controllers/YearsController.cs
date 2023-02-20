@@ -10,6 +10,8 @@ using System;
 using System.Linq;
 using Final.Context;
 using Microsoft.AspNetCore.Cors;
+using System.Threading;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Final.Controllers
 {
@@ -19,11 +21,14 @@ namespace Final.Controllers
     public class YearsController : ControllerBase
     {
         private readonly ApplicationContext _db;
+        IServiceScopeFactory _serviceScopeFactory;
+
         private readonly IHubContext<FirstHub, ITypedHubClient> _firstHub;
 
-        public YearsController(ApplicationContext context, IHubContext<FirstHub, ITypedHubClient> firstHub)
+        public YearsController(ApplicationContext context, IHubContext<FirstHub, ITypedHubClient> firstHub, IServiceScopeFactory serviceScopeFactory)
         {
             _db = context;
+            _serviceScopeFactory = serviceScopeFactory;
             _firstHub = firstHub;
         }
 
@@ -36,9 +41,9 @@ namespace Final.Controllers
             {
                 _db.T_Years.Add(model);
                 _db.SaveChanges();
-                //GetYears();
-                var obj = new RealtimeDataHub();
-                obj.GetUsers();
+                GetYears();
+                //var obj = new RealtimeDataHub();
+                //obj.GetUsers();
                 //await _firstHub.Clients.All.SendAsync("LoadProducts");
                 return Ok(new { result = "API Running" });
             }
@@ -50,8 +55,26 @@ namespace Final.Controllers
 
         public void GetYears()
         {
-            var lst = _db.T_Years.ToList();
-            _firstHub.Clients.All.BroadcastMessage(lst);
+            Thread th = new Thread(() =>
+            {
+                using (var scope = _serviceScopeFactory.CreateScope())
+                {
+                    var db = scope.ServiceProvider.GetService<ApplicationContext>();
+                    while (true)
+                    {
+                        var lst = db.T_Years.ToList();
+                        _firstHub.Clients.All.BroadcastMessage(lst);
+                        Thread.Sleep(10000);
+                    }
+                }
+               
+               
+
+            });
+            th.Start();
+
+            
+   
         }
     }
 }

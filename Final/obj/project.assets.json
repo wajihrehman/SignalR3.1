@@ -6094,17 +6094,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mwaji\\.nuget\\packages\\": {}
+    "C:\\Users\\mwaji\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj",
+      "projectUniqueName": "G:\\SignalRDemo\\20Feb\\test2\\SignalR3.1\\Final\\Final.csproj",
       "projectName": "Final",
-      "projectPath": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\Final.csproj",
+      "projectPath": "G:\\SignalRDemo\\20Feb\\test2\\SignalR3.1\\Final\\Final.csproj",
       "packagesPath": "C:\\Users\\mwaji\\.nuget\\packages\\",
-      "outputPath": "G:\\SignalRDemo\\16Feb\\SignalR3.1\\Final\\obj\\",
+      "outputPath": "G:\\SignalRDemo\\20Feb\\test2\\SignalR3.1\\Final\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\mwaji\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
